@@ -24,6 +24,7 @@ export default {
     return;
   }
   this.$emit('todo-added', this.label);
+  this.label = "";
 }
   },
   data() {
