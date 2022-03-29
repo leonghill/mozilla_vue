@@ -20,8 +20,11 @@
 export default {
    methods: {
        onSubmit() {
-           this.$emit("todo-added", this.label);
-    }
+  if(this.label === "") {
+    return;
+  }
+  this.$emit('todo-added', this.label);
+}
   },
   data() {
     return {
