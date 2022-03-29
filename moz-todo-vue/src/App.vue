@@ -78,10 +78,11 @@ export default {
   flex: 0 0 100%;
   text-align: center;
 }
+
 [class*="__lg"] {
   display: inline-block;
   width: 100%;
-  font-size: 1.9rem;
+  height: 5rem;
 }
 [class*="__lg"]:not(:last-child) {
   margin-bottom: 1rem;
