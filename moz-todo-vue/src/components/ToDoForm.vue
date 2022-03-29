@@ -1,6 +1,6 @@
 <template>
   <form @submit.prevent="onSubmit">
-    <label for="new-todo-input">
+    <label for="new-todo-input" class="label__lg">
       What needs to be done?
     </label>
     <input
@@ -9,8 +9,9 @@
       name = "new-todo"
       autocomplete = "off"
       v-model = "label"
+      class="input__lg"
     />
-    <button type = "submit">
+    <button type = "submit" class="btn btn__primary btn__lg">
       Add
     </button>
   </form>
