@@ -44,14 +44,7 @@ export default {
 /* Global styles */
 .btn {
   padding: 0.8rem 1rem 0.7rem;
-  border: 0.2rem solid #4d4d4d;
-  cursor: pointer;
-  text-transform: capitalize;
-}
-.btn__danger {
-  color: #fff;
-  background-color: #ca3c3c;
-  border-color: #bd2130;
+  border: 0.2Styling Vue components with CSS
 }
 .btn__filter {
   border-color: lightgrey;
