@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h1>My To-Do List</h1>
-    <h2 id="list-summary">{{listSummary}}</h2>
+    <h2 id="list-summary">{{ listSummary }}</h2>
     <to-do-form @todo-added="addToDo"></to-do-form>
     <ul aria-labelledby="list-summary" class="stack-large">
       <li v-for="item in ToDoItems" :key="item.id">
@@ -36,17 +36,21 @@ export default {
   methods: {
     addToDo(toDoLabel) {
   this.ToDoItems.push({id:uniqueId('todo-'), label: toDoLabel, done: false});
-    },    
+    },
+    updateDoneStatus(toDoId) {
+  const toDoToUpdate = this.ToDoItems.find(item => item.id === toDoId)
+  toDoToUpdate.done = !toDoToUpdate.done
+    },
+    
+
   },
   computed: {
     listSummary() {
       const numberFinishedItems = this.ToDoItems.filter(item =>item.done).length
-      return `${numberFinishedItems} out of ${this.ToDoItems.length} items completed`
+      return '${numberFinishedItems} out of ${this.ToDoItems.length} items completed'
     }
   }  
 };
-
-
 </script>
 
 <style>
